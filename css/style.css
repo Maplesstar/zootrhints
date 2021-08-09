@@ -1,0 +1,374 @@
+body {
+  background: #272822;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f0f0f0;
+}
+
+#locations {
+  width: 60%;
+  float:left;
+}
+
+#locations.hide-inaccessible .region.inaccessible:not(.peekable),
+#locations.hide-inaccessible .location.inaccessible:not(.peekable),
+#locations.hide-inaccessible .item-check.inaccessible:not(.peekable) {
+  display: none;
+}
+
+#locations.hide-inaccessible .item-check.inaccessible.peekable input,
+#locations.hide-inaccessible .item-check.inaccessible.peekable label {
+  opacity: 0.6;
+}
+
+#locations.hide-inaccessible .item-check.inaccessible.peekable .peek-controls {
+  display: inline-block;
+}
+
+#locations .peek-controls {
+  display: none;
+  margin-left: 10px;
+}
+
+#locations .peek-controls img {
+  display: none;
+  height: 15px;
+  margin-bottom: -3px;
+}
+
+#locations .peek-controls:hover {
+  cursor: pointer;
+}
+
+.item-check > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Don't allow highlighting of item check text */
+.item-check > label {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#locations.hide-inaccessible .item-check.peek-controls {
+  display: none;
+  content: " \1F441";
+  font-size: 12px;
+  display: inline-block;
+}
+
+#locations.keysanity .region.inaccessible.has-keys {
+  display: inline-block;
+}
+
+#locations.keysanity .location.inaccessible.has-keys {
+  display: block;
+}
+
+#locations.hide-collected *:not(.keys) > .no-animation {
+  display: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+#locations.hide-collected .region.collected,
+#locations.hide-collected .location.collected,
+#locations.hide-collected .item-check.collected {
+  opacity: 0;
+  animation: fadeOut 1s forwards;
+  /* z-index: -1; */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.no-animation, .no-animation * {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  animation: none !important;
+}
+
+.region {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 250px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.region.the-forest {
+  background-color: #138510;
+}
+.region.hyrule-field {
+  background-color: #eeff43;
+  color: #2e2e2e;
+}
+.region.kakariko {
+  background-color: #b348d2; /*#ff77aa;*/
+}
+.region.death-mountain {
+  background-color: #a91a05;
+}
+.region.zoras-river {
+  background-color: #3ad7f9;
+  color: #2e2e2e;
+}
+.region.lake-hylia {
+  background-color: #0c4e9b;
+}
+.region.the-desert {
+  background-color: #cc7025; /*#ffa500;*/
+}
+.region.hyrule-castle {
+  background-color: #cccccc;
+  color: #2e2e2e;
+}
+
+.region h2 {
+  text-align: center;
+  margin-top: 10px;
+  border-bottom: 2px solid;
+}
+
+.regionButton {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: white;
+  text-shadow: black 0px 0px 4px;
+  outline:none;
+  margin-top: 0px;
+}
+
+.location h3 {
+  position: relative;
+}
+
+.location h3 .keys {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.item-checks {
+  padding-left: 0;
+}
+
+ul.item-checks li {
+  list-style: none;
+}
+
+ul.item-checks li input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+}
+
+#right-side {
+  width: 10%;
+  top: 0;
+  float: right;
+  min-height: calc(100vh - 30px);
+}
+
+#hints-box {
+  width: 20%;
+  float: left;
+}
+
+#footer {
+  line-height: 20px;
+  font-size: 10px;
+  padding-top: 20px;
+  text-align: right;
+  height: 30px;
+  opacity: 0.8;
+}
+
+#footer .bugs {
+  width: 20px;
+}
+
+#age-selector {
+  margin: 10px;
+  text-align: center;
+}
+
+#check-pedestal {
+  margin: 10px;
+  text-align: center; 
+}
+
+#settings {
+  margin-top: 15px;
+  font-size: 10px;
+}
+
+#settings select {
+  width: 100%;
+}
+
+#settings tr td:first-child {
+  padding-right: 5px;
+}
+
+#settings tr td:last-child {
+  text-align: right;
+}
+
+.clear {
+  clear: both;
+}
+
+#inventory {
+  width: 100%;
+  float: left;
+}
+
+#inventory table {
+  margin: 0 auto;
+}
+
+.location .item {
+  float: right;
+}
+
+.item {
+  padding: 0;
+  position: relative;
+}
+
+.item .subtitle {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.item .count {
+  display: none;
+  font-size: 12px;
+}
+
+.item .subtitle, .item .count {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #ddd;
+  padding: 1px 3px;
+  background: #000;
+  border-radius: 10px;
+}
+
+.item .subtitle:empty, .item .count:empty, .item.collected .count:empty {
+  display: none;
+}
+
+.item.collected .count {
+  display: inline-block;
+}
+
+.item img, .item .subtitle {
+  opacity: 0.5;
+}
+
+.item.collected img, .item.collected .subtitle {
+  opacity: 1;
+}
+
+#overlay {
+  display: none;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+
+.popup {
+  display: none;
+  padding: 20px;
+  width: 400px;
+  background: #272822;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+#check-pedestal-popup button {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+}
+
+#peek-item-popup table {
+  margin: auto;
+}
+
+#peek-item-popup .peek-item {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.woth-dragHint {
+  margin-top: 5px;
+  height: 29px; 
+  width: 29px; 
+  display:inline-block;
+  background-image: url("../images/gossip-stone_32x32.png");
+  background-size: contain;
+}
+
+.hints-sometimes {
+  width:50%;
+  display: inline-block;
+}
+
+.hints-always {
+  display: inline-block;
+}
+
+.hints-woth > input, .hints-sometimes > input {
+  margin-bottom: 5px;
+}
+
+.hints-woth, .hints-sometimes, .hints-always {
+  /* If you want to implement it in very old browser-versions */
+  -webkit-user-select: none; /* Chrome/Safari */ 
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* The rule below is not implemented in browsers yet */
+  -o-user-select: none;
+
+  /* The rule below is implemented in most browsers by now */
+  user-select: none;
+}
