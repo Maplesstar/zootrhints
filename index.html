@@ -5,6 +5,27 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.3.2/dist/css/autoComplete.min.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type='text/javascript'>
+    var counter = 0;
+    function moreFields() {
+      counter++;
+      var newFields = document.getElementById('readroot').cloneNode(true);
+      newFields.id = '';
+      newFields.style.display = 'block';
+      var newField = newFields.childNodes;
+      for (var i=0;i<newField.length;i++) {
+        var theName = newField[i].name
+        if (theName)
+          newField[i].name = theName + counter;
+      }
+      var insertHere = document.getElementById('writeroot');
+      insertHere.parentNode.insertBefore(newFields,insertHere);
+    }
+    window.onload = function(){
+      document.getElementById('moreFields').onclick = function(){ moreFields(); }
+      moreFields();
+    }
+  </script>
 </head>
 <body>  
   <div style="width:100%">
@@ -20,7 +41,8 @@
           <!-- <div class="autoComplete_wrapper">
             <input class="autoComplete1" type="text" tabindex="1">
           </div> -->
-          <input style="display: inline-block;" type="text"> 
+          <input style="display: inline-block;" type="text">
+          <br />
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -29,32 +51,36 @@
           <!-- <div class="autoComplete_wrapper">
             <input class="autoComplete2" type="text" tabindex="1">
           </div> -->
-          <input style="display: inline-block;" type="text"> 
+          <input style="display: inline-block;" type="text">
+          <br />
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <br>
           <input style="display: inline-block;" type="text">
+          <br />
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <br>
           <input style="display: inline-block;" type="text">
+          <br />
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <br>
           <input style="display: inline-block;" type="text">
+          <br />
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <br>
         </div>
-        <br>
-        <div class="hints-woth">
+        <div class="hints-barren">
           Barren: 
           <br>
           <!-- <div class="autoComplete_wrapper">
@@ -64,17 +90,20 @@
           <br>
           <input type="text"> 
           <br>
-          <input type="text">
+          <input type="text"> 
+          <br>
         </div>
         <br>
         <div style="width: 100%; height: 100%">
           <div class="hints-sometimes">
-            Sometimes: <input type="text">
+            Sometimes:
+            <div id="readroot" style="display: none">
             <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+          </div>
+          <form method="post" action="/cgi-bin/show_params.cgi">
+            <span id="writeroot"></span>
+            <input type="button" id="moreFields" value="Another" />
+          </form>
           </div>
           <div class="hints-always">
             <div style="width: 80px; display: inline-block;">
@@ -338,7 +367,9 @@
     
     <div class="clear"></div>
     <div id="footer">
-      bugs? contact maxx#9586 or @jaredbranum
+      Originally by maxx#9586 aka @jaredbranum, updated by SamSch1.
+      <br />Fantatanked added the Gossip Stones tracker elements.
+      <br />This branch I want to implement some things as a code learning project. :)
     </div>
   </div>  
   <div id="overlay">
