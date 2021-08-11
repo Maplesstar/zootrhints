@@ -1,8 +1,8 @@
 define({
   "Rules": {
-    "ACCESSIBLE": "Accessible",
     "LOGIC_ONLY": "Logic Only",
-    "NO_MAJOR_GLITCHES": "No Major Glitches"
+    "ACCESSIBLE": "Accessible - Retired Ruleset",
+    "NO_MAJOR_GLITCHES": "No Major Glitches - Retired Ruleset"
   },
   "Show Obtainable Only": true,
   "Hide Collected": true,
@@ -28,12 +28,17 @@ define({
     "CLOSED": "Closed"
   },
   "Tokensanity": {
+    "NONE": "None",
+    "DUNGEON": "Dungeons Only",
+    "OVERWORLD": "Overworld Only",
+    "ALL": "All"
+  },
+  "Scrubsanity": {
     "NONE": "None"
-    // "Dungeons Only",
     // "All"
   },
   "Keysanity": false,
-  "Fast Ganon": true,
+  "Trials Off": true,
   // "Shuffle Songs": false,
   "Shuffle Weird Egg": false,
   "Shuffle Ocarinas": false,
