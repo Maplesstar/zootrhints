@@ -4,6 +4,18 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Mido's House (x4)", Locations.KOKIRI_FOREST),
     new ItemCheck("Kokiri Sword", Locations.KOKIRI_FOREST, [{age: Age.CHILD}]),
     new ItemCheck("Song of Storms Grotto", Locations.KOKIRI_FOREST, [{items: [Items.SONG_OF_STORMS]}]),
+    new ItemCheck("GS Know-It-All House", Locations.KOKIRI_FOREST, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS House of the Twins", Locations.KOKIRI_FOREST, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT}
+    ]),
+    new ItemCheck("GS Bean Patch Near Shop", Locations.KOKIRI_FOREST, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
     // Lost Woods
     new ItemCheck("Saria on Bridge", Locations.LOST_WOODS, [
       {settings: {FOREST: 'OPEN'}},
@@ -36,6 +48,20 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Mask of Truth Reward", Locations.LOST_WOODS, [
       {age: Age.CHILD, items: [Items.MASK_OF_TRUTH]}
     ]),
+    new ItemCheck("GS Bean Patch Near Bridge", Locations.LOST_WOODS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS Bean Patch Near Theater", Locations.LOST_WOODS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS High Ledge", Locations.LOST_WOODS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.LONGSHOT, Items.BOMBCHU]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.LONGSHOT, Items.BOMBCHU]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.MAGIC_BEANS]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.MAGIC_BEANS]}
+    ]),
     // Sacred Forest Meadow
     new ItemCheck("Wolfos Grotto", Locations.SACRED_FOREST_MEADOW, [{abilities: [Abilities.BLAST]}]),
     new ItemCheck("Saria's Song", Locations.SACRED_FOREST_MEADOW, [
@@ -45,6 +71,10 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.SARIAS_SONG]},
       {age: Age.ADULT, items: [Items.MINUET_OF_FOREST]},
       {age: Age.ADULT, offLogic: true},
+    ]),
+    new ItemCheck("GS Meadow Wall", Locations.SACRED_FOREST_MEADOW, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
     ]),
     // Hyrule Field
     new ItemCheck("Grotto Near Market", Locations.HYRULE_FIELD, [{abilities: [Abilities.BLAST]}]),
@@ -63,6 +93,18 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       preset: {item: Items.OCARINA_OF_TIME, settings: {SHUFFLE_OCARINAS: false}},
       visible: {peek: true}
     }),
+    new ItemCheck("GS Near Kakariko", Locations.HYRULE_FIELD, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG], abilities: [Abilities.BLAST]}
+    ]),
+    new ItemCheck("GS Near Valley", Locations.HYRULE_FIELD, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT, Items.MEGATON_HAMMER]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT, Items.MEGATON_HAMMER]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG], abilities: [Abilities.BLAST]}
+    ]),
     // Hyrule Castle
     new ItemCheck("Malon outside Castle", Locations.HYRULE_CASTLE, [
       {age: Age.CHILD},
@@ -74,6 +116,16 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ]),
     new ItemCheck("Din's Fire Fairy", Locations.HYRULE_CASTLE, [
       {age: Age.CHILD, items: [Items.ZELDAS_LULLABY], abilities: [Abilities.BLAST]},
+    ]),
+    new ItemCheck("GS Hyrule Castle Tree", Locations.HYRULE_CASTLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS Storms Grotto", Locations.HYRULE_CASTLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG, Items.SONG_OF_STORMS], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG, Items.SONG_OF_STORMS], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG, Items.SONG_OF_STORMS], glitches: true},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG, Items.SONG_OF_STORMS], glitches: true}
     ]),
     // Hyrule Market
     new ItemCheck("Slingshot Game", Locations.HYRULE_MARKET, [{age: Age.CHILD}]),
@@ -92,6 +144,10 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.EPONAS_SONG, Items.FAIRY_BOW], abilities: [Abilities.BOTTLE]},
       {age: Age.ADULT, items: [Items.FAIRY_BOW], abilities: [Abilities.BOTTLE], offLogic: true},
       {age: Age.ADULT, items: [Items.BOMBCHU], abilities: [Abilities.BOTTLE], offLogic: true},
+    ]),
+    new ItemCheck("GS Guard Room", Locations.HYRULE_MARKET, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD}
     ]),
     // Temple of Time
     new ItemCheck("Master Sword", Locations.TEMPLE_OF_TIME, [
@@ -126,6 +182,22 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Heart Piece", Locations.LON_LON_RANCH, [{age: Age.CHILD}], {
       visible: {peek: true, requirements: [{}]}
     }),
+    new ItemCheck("GS Lon Lon Tree", Locations.LON_LON_RANCH, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS Back of the Corral", Locations.LON_LON_RANCH, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS Outside Fence", Locations.LON_LON_RANCH, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS House Window", Locations.LON_LON_RANCH, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
     // Kakariko Village
     new ItemCheck("Anju's Cuccos", Locations.KAKARIKO_VILLAGE, [{age: Age.CHILD}]),
     new ItemCheck("Redead Grotto", Locations.KAKARIKO_VILLAGE, [{abilities: [Abilities.BLAST]}]),
@@ -166,6 +238,32 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ]),
     new ItemCheck("Song of Storms", Locations.KAKARIKO_VILLAGE, [{age: Age.ADULT, items: [Items.FAIRY_OCARINA]}]),
     new ItemCheck("Nocturne of Shadow", Locations.KAKARIKO_VILLAGE, [{age: Age.ADULT, items: [Items.FOREST_MEDALLION, Items.FIRE_MEDALLION, Items.WATER_MEDALLION]}]),
+    new ItemCheck("GS In the Tree", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD}
+    ]),
+    new ItemCheck("GS Guards House", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD}
+    ]),
+    new ItemCheck("GS On Skulltula House", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD}
+    ]),
+    new ItemCheck("GS House Under Construction", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD}
+    ]),
+    new ItemCheck("GS House Under Construction", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOMBCHU]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOMBCHU]}
+    ]),
+    new ItemCheck("GS Above Impa's House", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
+    ]),
     // Graveyard
     new ItemCheck("Shield Grave", Locations.GRAVEYARD),
     new ItemCheck("Dampe's Tour", Locations.GRAVEYARD, [{age: Age.CHILD}], {
@@ -189,6 +287,14 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {
       visible: {peek: true, requirements: [{}]}
     }),
+    new ItemCheck("GS Bean Patch in Graveyard", Locations.GRAVEYARD, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS Upper Wall", Locations.KAKARIKO_VILLAGE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
     // Death Mountain Trail
     new ItemCheck("Heart above DC", Locations.DEATH_MOUNTAIN_TRAIL, [{}], {
       visible: {peek: true}
@@ -205,6 +311,22 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.CLAIM_CHECK], abilities: [Abilities.IGNITE]},
       {age: Age.ADULT, items: [Items.CLAIM_CHECK, Items.BOLERO_OF_FIRE, Items.HOOKSHOT]},
       {age: Age.ADULT, items: [Items.CLAIM_CHECK, Items.BOLERO_OF_FIRE, Items.MAGIC_BEANS]}
+    ]),
+    new ItemCheck("GS Bean Patch by Dodongo's Cavern", Locations.DEATH_MOUNTAIN_TRAIL, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS Breakable Wall", Locations.DEATH_MOUNTAIN_TRAIL, [
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, abilities: [Abilities.BLAST]}
+    ]),
+    new ItemCheck("GS Above Dodongo's Cavern", Locations.DEATH_MOUNTAIN_TRAIL, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.MEGATON_HAMMER]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.MEGATON_HAMMER]}
+    ]),
+    new ItemCheck("GS Falling Rocks Path", Locations.DEATH_MOUNTAIN_TRAIL, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.MEGATON_HAMMER]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.MEGATON_HAMMER]}
     ]),
     // Death Mountain Crater
     new ItemCheck("Wall Heart", Locations.DEATH_MOUNTAIN_CRATER, [
@@ -254,6 +376,14 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.HYLIAN_SHIELD], abilities: [Abilities.BOMB], glitches: true},
       {age: Age.ADULT, items: [Items.MIRROR_SHIELD], abilities: [Abilities.BOMB], glitches: true}
     ]),
+    new ItemCheck("GS Bean Patch in Crater", Locations.DEATH_MOUNTAIN_CRATER, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS In the Crate", Locations.DEATH_MOUNTAIN_CRATER, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.BLAST]}
+    ]),
     // Goron City
     new ItemCheck("Spinning Pot", Locations.GORON_CITY, [
       {age: Age.CHILD, items: [Items.ZELDAS_LULLABY, Items.DEKU_STICK], abilities: [Abilities.BOMB]},
@@ -274,6 +404,14 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.MEGATON_HAMMER]},
       {age: Age.ADULT, items: [Items.SILVER_GAUNTLETS]},
       {items: [Items.HOVER_BOOTS], abilities: [Abilities.BLAST]}
+    ]),
+    new ItemCheck("GS Central Platform", Locations.GORON_CITY, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT}
+    ]),
+    new ItemCheck("GS Boulder Maze", Locations.GORON_CITY, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.BLAST]}
     ]),
     // Zora's River
     new ItemCheck("Heart Piece 1", Locations.ZORAS_RIVER, [
@@ -299,13 +437,43 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.CHILD, abilities: [Abilities.BLAST], items: [Items.ZELDAS_LULLABY, Items.EPONAS_SONG, Items.SARIAS_SONG, Items.SUNS_SONG, Items.SONG_OF_TIME, Items.SONG_OF_STORMS]},
       {age: Age.CHILD, abilities: [Abilities.SINK], items: [Items.ZELDAS_LULLABY, Items.EPONAS_SONG, Items.SARIAS_SONG, Items.SUNS_SONG, Items.SONG_OF_TIME, Items.SONG_OF_STORMS]}
     ]),
+    new ItemCheck("GS Tree", Locations.ZORAS_RIVER, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS Ladder", Locations.ZORAS_RIVER, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.SINK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.SINK]}
+    ]),
+    new ItemCheck("GS Near Raised Grottos", Locations.ZORAS_RIVER, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS Above Bridge", Locations.ZORAS_RIVER, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
+    ]),
     // Zora's Domain
     new ItemCheck("Diving Game", Locations.ZORAS_DOMAIN, [{age: Age.CHILD}]),
     new ItemCheck("Torch Run", Locations.ZORAS_DOMAIN, [{age: Age.CHILD, items: [Items.DEKU_STICK]}]),
     new ItemCheck("King Zora", Locations.ZORAS_DOMAIN, [{age: Age.ADULT, abilities: [Abilities.BOTTLE]}]),
+    new ItemCheck("GS Frozen Waterfall", Locations.ZORAS_DOMAIN, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.MAGIC]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.MAGIC]}
+    ]),
     // Zora's Fountain
-    new ItemCheck("Farore's Wind Fairy", Locations.ZORAS_FOUNTAIN, [{items: [Items.ZELDAS_LULLABY], abilities: [Abilities.BOMB]}]),
-    new ItemCheck("Iceberg Heart", Locations.ZORAS_FOUNTAIN, [{age: Age.ADULT}], {
+    new ItemCheck("Farore's Wind Fairy", Locations.ZORAS_FOUNTAIN, [
+      {items: [Items.ZELDAS_LULLABY], abilities: [Abilities.BOMB]}
+    ]),
+    new ItemCheck("Iceberg Heart", Locations.ZORAS_FOUNTAIN, [
+      {age: Age.ADULT}
+    ], {
       visible: {peek: true}
     }),
     new ItemCheck("Underwater Heart", Locations.ZORAS_FOUNTAIN, [
@@ -313,6 +481,18 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {visible: {peek: true, requirements: [
       {age: Age.ADULT}
     ]}}),
+    new ItemCheck("GS Tree", Locations.ZORAS_FOUNTAIN, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS Wall", Locations.ZORAS_FOUNTAIN, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.RUTOS_LETTER, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.RUTOS_LETTER, Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Hidden Cave", Locations.ZORAS_FOUNTAIN, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS], abilities: [Abilities.BLAST]}
+    ]),
     // Lake Hylia
     new ItemCheck("Fishing (Child)", Locations.LAKE_HYLIA, [{age: Age.CHILD}]),
     new ItemCheck("Ruto's Letter", Locations.LAKE_HYLIA, [
@@ -340,6 +520,28 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {visible: {peek: true, requirements: [
       {age: Age.ADULT, items: [Items.FAIRY_BOW]}
     ]}}),
+    new ItemCheck("GS Bean Patch by Lab", Locations.LAKE_HYLIA, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS Lab Wall", Locations.LAKE_HYLIA, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Small Island", Locations.LAKE_HYLIA, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
+    ]),
+    new ItemCheck("GS Tree", Locations.LAKE_HYLIA, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT], glitches: true},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT], glitches: true}
+    ]),
+    new ItemCheck("GS Lab Crate", Locations.LAKE_HYLIA, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.IRON_BOOTS, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.IRON_BOOTS, Items.HOOKSHOT]}
+    ]),
     // Gerudo Valley
     new ItemCheck("Crate Heart", Locations.GERUDO_VALLEY, [
       {age: Age.CHILD},
@@ -365,6 +567,22 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, abilities: [Abilities.SHIELD, Abilities.BOMB], glitches: true},
       {age: Age.ADULT, items: [Items.HOVER_BOOTS, Items.MEGATON_HAMMER], glitches: true},
     ]),
+    new ItemCheck("GS Bean Patch by Waterfall", Locations.GERUDO_VALLEY, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS Over Small Bridge", Locations.GERUDO_VALLEY, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Behind Tent", Locations.GERUDO_VALLEY, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS On a Pillar", Locations.GERUDO_VALLEY, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
+    ]),
     // Gerudo Fortress
     new ItemCheck("Free the Carpenters", Locations.GERUDO_FORTRESS, [
       {abilities: [Abilities.ATTACK]}
@@ -381,9 +599,27 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Archery Game (1500)", Locations.GERUDO_FORTRESS, [
       {items: [Items.EPONAS_SONG, Items.FAIRY_BOW], checks: {location: Locations.GERUDO_FORTRESS, name: "Free the Carpenters"}},
     ]),
+    new ItemCheck("GS Top Floor", Locations.GERUDO_FORTRESS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOVER_BOOTS]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOVER_BOOTS]}
+    ]),
+    new ItemCheck("GS Archery Range", Locations.GERUDO_FORTRESS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOOKSHOT]}
+    ]),
     // Haunted Wasteland
     new ItemCheck("Light the Torches", Locations.HAUNTED_WASTELAND, [
       {abilities: [Abilities.BURN]},
+    ]),
+    new ItemCheck("GS Top Floor", Locations.HAUNTED_WASTELAND, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOVER_BOOTS, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOVER_BOOTS, Items.HOOKSHOT]}
     ]),
     // Desert Colossus
     new ItemCheck("Requiem of Spirit", Locations.DESERT_COLOSSUS),
@@ -397,6 +633,22 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {
       visible: {peek: true, requirements: [{}]}
     }),
+    new ItemCheck("GS Bean Patch in Colossus", Locations.DESERT_COLOSSUS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
+    ]),
+    new ItemCheck("GS On the Hill", Locations.DESERT_COLOSSUS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.MAGIC_BEANS, Items.REQUIEM_OF_SPIRIT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.MAGIC_BEANS, Items.REQUIEM_OF_SPIRIT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT], glitches: true},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT], glitches: true}
+    ]),
+    new ItemCheck("GS On a Tree", Locations.DESERT_COLOSSUS, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
+    ]),
     // Deku Tree
     new ItemCheck("Map", Locations.DEKU_TREE),
     new ItemCheck("Slingshot", Locations.DEKU_TREE, [
@@ -434,6 +686,36 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.MEGATON_HAMMER, Items.BOOMERANG], abilities: [Abilities.BURN], glitches: true},
       {items: [Items.MEGATON_HAMMER, Items.BOMBCHU], abilities: [Abilities.BURN], glitches: true}
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Compass Room", Locations.DEKU_TREE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DINS_FIRE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DINS_FIRE]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Basement Vines", Locations.DEKU_TREE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DINS_FIRE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DINS_FIRE]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOMBS]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.BOMBS]}
+    ]),
+    new ItemCheck("GS Basement Gate", Locations.DEKU_TREE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DINS_FIRE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DINS_FIRE]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Back Room", Locations.DEKU_TREE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.BLAST], items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, abilities: [Abilities.BLAST], items: [Items.BOOMERANG]}
+    ]),
     // Dodongo's Cavern
     new ItemCheck("Map", Locations.DODONGOS_CAVERN, [
       {abilities: [Abilities.CRUMBLE]},
@@ -459,6 +741,36 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("King Dodongo", Locations.DODONGOS_CAVERN, [
       {abilities: [Abilities.BOMB]}
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Side Room", Locations.DODONGOS_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, abilities: [Abilities.CRUMBLE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.ADULT, abilities: [Abilities.CRUMBLE]},
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE], abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE], abilities: [Abilities.ATTACK]},
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE], items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE], items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE], items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE], items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Scarecrow Ledge", Locations.DODONGOS_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE], items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE], items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE], items: [Items.HOOKSHOT, Items.FAIRY_OCARINA]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE], items: [Items.HOOKSHOT, Items.FAIRY_OCARINA]}
+    ]),
+    new ItemCheck("GS Vines above Staircase", Locations.DODONGOS_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE]}
+    ]),
+    new ItemCheck("GS Alcove above Staircase", Locations.DODONGOS_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE], items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE], items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE], items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE], items: [Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS Vines above Staircase", Locations.DODONGOS_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, abilities: [Abilities.CRUMBLE, Abilities.BOMB]},
+      {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE, Abilities.BOMB]}
+    ]),
     // Jabu Jabu's Belly
     new ItemCheck("Boomerang", Locations.JABU_JABUS_BELLY),
     new ItemCheck("Map", Locations.JABU_JABUS_BELLY, [{items: [Items.BOOMERANG]}]),
@@ -466,6 +778,24 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Barinade", Locations.JABU_JABUS_BELLY, [
       {items: [Items.BOOMERANG]}
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Water Switch Room", Locations.JABU_JABUS_BELLY, [
+      {settings: {TOKENSANITY: "ALL"}},
+      {settings: {TOKENSANITY: "DUNGEON"}}
+    ]),
+    new ItemCheck("GS Lobby Basement Lower", Locations.JABU_JABUS_BELLY, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Lobby Basement Upper", Locations.JABU_JABUS_BELLY, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("GS Near Boss", Locations.JABU_JABUS_BELLY, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOMBS, Items.DEKU_SHIELD], glitches: true},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOMBS, Items.DEKU_SHIELD], glitches: true}
+    ]),
     // Forest Temple
     new ItemCheck("First Room", Locations.FOREST_TEMPLE),
     new ItemCheck("Stalfos Fight", Locations.FOREST_TEMPLE, [{abilities: [Abilities.SLASH]}]),
@@ -530,6 +860,34 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Phantom Ganon", Locations.FOREST_TEMPLE, [
       {items: [Items.FAIRY_BOW], abilities: [Abilities.STRENGTH]}
     ], {visible: {peek: true}}),
+    new ItemCheck("GS First Room", Locations.FOREST_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}},
+      {settings: {TOKENSANITY: "DUNGEON"}}
+    ]),
+    new ItemCheck("GS Lobby", Locations.FOREST_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}},
+      {settings: {TOKENSANITY: "DUNGEON"}}
+    ]),
+    new ItemCheck("GS East Courtyard Raised Island", Locations.FOREST_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.SONG_OF_TIME]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.SONG_OF_TIME]}
+    ]),
+    new ItemCheck("GS West Courtyard Wall", Locations.FOREST_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.FAIRY_BOW, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.FAIRY_BOW, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.SONG_OF_TIME, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.SONG_OF_TIME, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOVER_BOOTS]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOVER_BOOTS]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.GORONS_BRACELET]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.GORONS_BRACELET]}
+    ]),
+    new ItemCheck("GS Basement", Locations.FOREST_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.FAIRY_BOW], abilities: [Abilities.STRENGTH]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.FAIRY_BOW], abilities: [Abilities.STRENGTH]}
+    ]),
     // Fire Temple
     new ItemCheck("Near Boss Door", Locations.FIRE_TEMPLE),
     new ItemCheck("Flare Dancer", Locations.FIRE_TEMPLE, [
@@ -608,6 +966,28 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.MEGATON_HAMMER, Items.HOVER_BOOTS]},
       {items: [Items.MEGATON_HAMMER], offLogic: true},
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Boss Key Loop", Locations.FIRE_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.MEGATON_HAMMER]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.MEGATON_HAMMER]}
+    ]),
+    new ItemCheck("GS Song of Time Room", Locations.FIRE_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.SONG_OF_TIME]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.SONG_OF_TIME]}
+    ]),
+    new ItemCheck("GS Boulder Maze", Locations.FIRE_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.GORONS_BRACELET], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.GORONS_BRACELET], abilities: [Abilities.BOMB]}
+    ]),
+    new ItemCheck("GS Scarecrow Climb", Locations.FIRE_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.GORONS_BRACELET, Items.FAIRY_OCARINA], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.GORONS_BRACELET, Items.FAIRY_OCARINA], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.GORONS_BRACELET, Items.LONGSHOT], abilities: [Abilities.BOMB], glitches: true},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.GORONS_BRACELET, Items.LONGSHOT], abilities: [Abilities.BOMB], glitches: true}
+    ]),
+    new ItemCheck("GS Scarecrow Top", Locations.FIRE_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.GORONS_BRACELET, Items.FAIRY_OCARINA], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.GORONS_BRACELET, Items.FAIRY_OCARINA], abilities: [Abilities.BOMB]}
+    ]),
     // Water Temple
     new ItemCheck("Map", Locations.WATER_TEMPLE, [
       {items: [Items.IRON_BOOTS]},
@@ -701,6 +1081,38 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.HOVER_BOOTS, Items.MEGATON_HAMMER], glitches: true},
       {items: [Items.HOVER_BOOTS], abilities: [Abilities.SHIELD, Abilities.BOMB], glitches: true},
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Behind Gate", Locations.WATER_TEMPLE, [
+      {items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY]},
+      {items: [Items.HOOKSHOT], offLogic: true},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY, Items.IRON_BOOTS], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY], abilities: [Abilities.BOMB, Abilities.DIVE]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOVER_BOOTS, Items.ZELDAS_LULLABY, Items.IRON_BOOTS], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOVER_BOOTS, Items.ZELDAS_LULLABY], abilities: [Abilities.BOMB, Abilities.DIVE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY, Items.IRON_BOOTS], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY], abilities: [Abilities.BOMB, Abilities.DIVE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOVER_BOOTS, Items.ZELDAS_LULLABY, Items.IRON_BOOTS], abilities: [Abilities.BOMB]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOVER_BOOTS, Items.ZELDAS_LULLABY], abilities: [Abilities.BOMB, Abilities.DIVE]}
+    ]),
+    new ItemCheck("GS Central Pillar", Locations.WATER_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.ZELDAS_LULLABY, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.ZELDAS_LULLABY, Items.HOOKSHOT, Items.FARORES_WIND]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.ZELDAS_LULLABY, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.ZELDAS_LULLABY, Items.HOOKSHOT, Items.FARORES_WIND]}
+    ]),
+    new ItemCheck("GS Near Boss Key Chest", Locations.WATER_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.ZELDAS_LULLABY, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.ZELDAS_LULLABY, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.IRON_BOOTS, Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.IRON_BOOTS, Items.LONGSHOT]}
+    ]),
+    new ItemCheck("GS Falling Platform Room", Locations.WATER_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS River", Locations.WATER_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.SONG_OF_TIME, Items.IRON_BOOTS, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.SONG_OF_TIME, Items.IRON_BOOTS, Items.HOOKSHOT]}
+    ]),
     // Shadow Temple
     new ItemCheck("Map", Locations.SHADOW_TEMPLE),
     new ItemCheck("Dead Hand", Locations.SHADOW_TEMPLE, [{abilities: [Abilities.SLASH]}]),
@@ -797,6 +1209,26 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.ZELDAS_LULLABY, Items.LONGSHOT, Items.HYLIAN_SHIELD], abilities: [Abilities.BOMB], glitches: true},
       {items: [Items.ZELDAS_LULLABY, Items.LONGSHOT, Items.MIRROR_SHIELD], abilities: [Abilities.BOMB], glitches: true}
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Like Like Room", Locations.SHADOW_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}},
+      {settings: {TOKENSANITY: "DUNGEON"}}
+    ]),
+    new ItemCheck("GS Falling Spikes Room", Locations.SHADOW_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS Single Giant Pot Room", Locations.SHADOW_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS Near Ship", Locations.SHADOW_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.LONGSHOT]}
+    ]),
+    new ItemCheck("GS Three Giant Pots Room", Locations.SHADOW_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT, Items.ZELDAS_LULLABY]}
+    ]),
     // Spirit Temple
     new ItemCheck("Child-Only 1", Locations.SPIRIT_TEMPLE, [
       // boomerang
@@ -894,6 +1326,38 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Twinrova", Locations.SPIRIT_TEMPLE, [
       {age: Age.ADULT, items: [Items.MIRROR_SHIELD, Items.HOOKSHOT], abilities: [Abilities.BOMB, Abilities.ATTACK]},
     ], {visible: {peek: true}}),
+    new ItemCheck("GS Metal Fence", Locations.SPIRIT_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.FAIRY_SLINGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOMBCHU]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOMBCHU]}
+    ]),
+    new ItemCheck("GS Sun on Floor Room", Locations.SPIRIT_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS]}
+    ]),
+    new ItemCheck("GS Hall after Sun Blocks", Locations.SPIRIT_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS, Items.HOOKSHOT]}
+    ]),
+    new ItemCheck("GS Boulder Room", Locations.SPIRIT_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.SONG_OF_TIME], abilities: [Abilities.SHOOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.ADULT, items: [Items.SONG_OF_TIME], abilities: [Abilities.SHOOT]}
+    ]),
+    new ItemCheck("GS Lobby", Locations.SPIRIT_TEMPLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.CHILD, items: [Items.DEKU_STICK, Items.BOOMERANG]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS, Items.HOVER_BOOTS]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS, Items.HOVER_BOOTS]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS, Items.HOOKSHOT]}
+    ]),
     // Bottom of the Well
     new ItemCheck("Front Bombable", Locations.BOTTOM_OF_THE_WELL, [{abilities: [Abilities.BOMB]}]),
     new ItemCheck("Front Hidden", Locations.BOTTOM_OF_THE_WELL, [
@@ -934,6 +1398,24 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.ZELDAS_LULLABY, Items.KOKIRI_SWORD]},
       {items: [Items.ZELDAS_LULLABY], abilities: [Abilities.SLASH], offLogic: true}
     ]),
+    new ItemCheck("GS West Inner Room", Locations.BOTTOM_OF_THE_WELL, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG, Items.LENS_OF_TRUTH]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG, Items.LENS_OF_TRUTH]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG], glitches: true},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG], glitches: true},
+    ]),
+    new ItemCheck("GS East Inner Room", Locations.BOTTOM_OF_THE_WELL, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG, Items.LENS_OF_TRUTH]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG, Items.LENS_OF_TRUTH]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG], glitches: true},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG], glitches: true},
+    ]),
+    new ItemCheck("GS Like Like Cage", Locations.BOTTOM_OF_THE_WELL, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG, Items.LENS_OF_TRUTH]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG, Items.LENS_OF_TRUTH]},
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.BOOMERANG], glitches: true},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.BOOMERANG], glitches: true},
+    ]),
     // Ice Cavern
     new ItemCheck("Map", Locations.ICE_CAVERN, [{abilities: [Abilities.BOTTLE]}]),
     new ItemCheck("Compass", Locations.ICE_CAVERN, [{abilities: [Abilities.BOTTLE]}]),
@@ -943,6 +1425,18 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {visible: {peek: true}, requirements: [{}]}),
     new ItemCheck("Iron Boots", Locations.ICE_CAVERN, [{abilities: [Abilities.BOTTLE]}]),
     new ItemCheck("Serenade of Water", Locations.ICE_CAVERN, [{abilities: [Abilities.BOTTLE, Abilities.ATTACK]}]),
+    new ItemCheck("GS Spinning Scythe Room", Locations.ICE_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT]},
+    ]),
+    new ItemCheck("GS Frozen Heart Piece Room", Locations.ICE_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT, Items.BOTTLE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT, Items.BOTTLE]},
+    ]),
+    new ItemCheck("GS Push Block Room", Locations.ICE_CAVERN, [
+      {settings: {TOKENSANITY: "ALL"}, items: [Items.HOOKSHOT, Items.BOTTLE]},
+      {settings: {TOKENSANITY: "DUNGEON"}, items: [Items.HOOKSHOT, Items.BOTTLE]},
+    ]),
     // Gerudo Training Grounds
     new ItemCheck("Lobby Eye Switch 1", Locations.GERUDO_TRAINING_GROUNDS, [
       {items: [Items.FAIRY_BOW]},
@@ -1032,6 +1526,12 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.GOLDEN_GAUNTLETS, Items.ZELDAS_LULLABY]},
       {age: Age.ADULT, items: [Items.ZELDAS_LULLABY], glitches: true},
     ]),
+    new ItemCheck("GS On the Wall", Locations.GANONS_CASTLE, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.FAIRY_BOW]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.FAIRY_BOW]}
+    ]),
     // Inside Ganon's Castle
     new ItemCheck("Forest Trial", Locations.INSIDE_GANONS_CASTLE),
     new ItemCheck("Water Trial 1", Locations.INSIDE_GANONS_CASTLE),
@@ -1068,7 +1568,7 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.HOOKSHOT, Items.BOMBCHU], offLogic: true},
     ]),
     new ItemCheck("Boss Key", Locations.INSIDE_GANONS_CASTLE, [
-      {settings: {FAST_GANON: true}},
+      {settings: {TRIALS_OFF: true}},
       {abilities: [Abilities.SHIELD, Abilities.BOMB], glitches: true},
       {items: [Items.DINS_FIRE, Items.LONGSHOT, Items.MEGATON_HAMMER, Items.BOMBCHU, Items.LIGHT_ARROWS, Items.MIRROR_SHIELD, Items.GOLDEN_GAUNTLETS], abilities: [Abilities.BOTTLE]},
       {items: [Items.FIRE_ARROWS, Items.LONGSHOT, Items.MEGATON_HAMMER, Items.BOMBCHU, Items.LIGHT_ARROWS, Items.MIRROR_SHIELD, Items.GOLDEN_GAUNTLETS], abilities: [Abilities.BOTTLE]},
