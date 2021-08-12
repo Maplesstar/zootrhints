@@ -545,11 +545,11 @@ $('.woth-dragHint').click(function() {
       $(this).data('cycle', 2)
       break;
     case 2:
-      $(this).css('background-image', 'url("images/bottle.png")');
+      $(this).css('background-image', 'url("images/BOTTLE.png")');
       $(this).data('cycle', 3)
       break;
     case 3:
-      $(this).css('background-image', 'url("images/big poe.png")');
+      $(this).css('background-image', 'url("images/Big Poe.png")');
       $(this).data('cycle', 4)
       break;
     case 4:
