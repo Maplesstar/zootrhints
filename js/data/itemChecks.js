@@ -36,11 +36,20 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Ocarina Game", Locations.LOST_WOODS, [
       {age: Age.CHILD, items: [Items.FAIRY_OCARINA]}
     ]),
-    new ItemCheck("Grotto (GC)", Locations.LOST_WOODS, [
+    new ItemCheck("Grotto near Goron City", Locations.LOST_WOODS, [
       {abilities: [Abilities.BLAST]}
     ]),
-    new ItemCheck("Grotto (SFM)", Locations.LOST_WOODS, [
-      {abilities: [Abilities.BLAST]}
+    new ItemCheck("Scrubs near Forest Stage (x2)", Locations.LOST_WOODS, [
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, items: [Items.DEKU_SHIELD]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, items: [Items.DEKU_NUTS]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
+    new ItemCheck("Grotto near Meadow Left Scrub", Locations.LOST_WOODS, [
+      {settings: {SCRUBSANITY: "OFF"}, abilities: [Abilities.BLAST]}
+    ]),
+    new ItemCheck("Scrub Grotto near Meadow (x2)", Locations.LOST_WOODS, [
+      {settings: {SCRUBSANITY: "ON"}, abilities: [Abilities.BLAST]}
     ]),
     new ItemCheck("Skull Mask Reward", Locations.LOST_WOODS, [
       {age: Age.CHILD, items: [Items.SKULL_MASK]}
@@ -72,6 +81,9 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.MINUET_OF_FOREST]},
       {age: Age.ADULT, offLogic: true},
     ]),
+    new ItemCheck("Scrubs in Storms Grotto (x2)", Locations.SACRED_FOREST_MEADOW, [
+      {settings: {SCRUBSANITY: "ON"}, items: [Items.SONG_OF_STORMS]}
+    ]),
     new ItemCheck("GS Meadow Wall", Locations.SACRED_FOREST_MEADOW, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOOKSHOT]},
       {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOOKSHOT]}
@@ -84,7 +96,7 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {visible: {peek: true, requirements: [
       {abilities: [Abilities.BLAST]},
     ]}}),
-    new ItemCheck("Grotto Near Lake (scrub)", Locations.HYRULE_FIELD, [{abilities: [Abilities.BLAST]}]),
+    new ItemCheck("Scrub Grotto inside Lake Fences", Locations.HYRULE_FIELD, [{abilities: [Abilities.BLAST]}]),
     new ItemCheck("Grotto Near Lake (open)", Locations.HYRULE_FIELD),
     new ItemCheck("Grotto in southeast woods", Locations.HYRULE_FIELD, [{abilities: [Abilities.BLAST]}]),
     new ItemCheck("Ocarina of Time", Locations.HYRULE_FIELD, [
@@ -182,6 +194,12 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Heart Piece", Locations.LON_LON_RANCH, [{age: Age.CHILD}], {
       visible: {peek: true, requirements: [{}]}
     }),
+    new ItemCheck("Scrubs in Grotto (x3)", Locations.LON_LON_RANCH, [
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD], abilities: [Abilities.ATTACK]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, items: [Items.DEKU_SHIELD]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, items: [Items.DEKU_NUTS]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, items: [Items.BOOMERANG]}
+    ]),
     new ItemCheck("GS Lon Lon Tree", Locations.LON_LON_RANCH, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
       {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.ATTACK]}
@@ -376,13 +394,16 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.HYLIAN_SHIELD], abilities: [Abilities.BOMB], glitches: true},
       {age: Age.ADULT, items: [Items.MIRROR_SHIELD], abilities: [Abilities.BOMB], glitches: true}
     ]),
+    new ItemCheck("Scrub below Ladder", Locations.DEATH_MOUNTAIN_CRATER, [
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD], abilities: [Abilities.BLAST]}
+    ]),
     new ItemCheck("GS Bean Patch in Crater", Locations.DEATH_MOUNTAIN_CRATER, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
       {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
     ]),
     new ItemCheck("GS In the Crate", Locations.DEATH_MOUNTAIN_CRATER, [
-      {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.BLAST]},
-      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, abilities: [Abilities.BLAST]}
+      {settings: {TOKENSANITY: "ALL"}, age: [Age.CHILD], abilities: [Abilities.BLAST]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: [Age.CHILD], abilities: [Abilities.BLAST]}
     ]),
     // Goron City
     new ItemCheck("Spinning Pot", Locations.GORON_CITY, [
@@ -404,6 +425,11 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.MEGATON_HAMMER]},
       {age: Age.ADULT, items: [Items.SILVER_GAUNTLETS]},
       {items: [Items.HOVER_BOOTS], abilities: [Abilities.BLAST]}
+    ]),
+    new ItemCheck("Scrubs beyond Lava (x3)", Locations.GORON_CITY, [
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.ADULT], items: [Items.HOOKSHOT, Items.SONG_OF_TIME]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.ADULT], items: [Items.HOOKSHOT, Items.GORON_TUNIC]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.ADULT], items: [Items.HOOKSHOT, Items.NAYRUS_LOVE]}
     ]),
     new ItemCheck("GS Central Platform", Locations.GORON_CITY, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT},
@@ -436,6 +462,11 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Frogs 2", Locations.ZORAS_RIVER, [
       {age: Age.CHILD, abilities: [Abilities.BLAST], items: [Items.ZELDAS_LULLABY, Items.EPONAS_SONG, Items.SARIAS_SONG, Items.SUNS_SONG, Items.SONG_OF_TIME, Items.SONG_OF_STORMS]},
       {age: Age.CHILD, abilities: [Abilities.SINK], items: [Items.ZELDAS_LULLABY, Items.EPONAS_SONG, Items.SARIAS_SONG, Items.SUNS_SONG, Items.SONG_OF_TIME, Items.SONG_OF_STORMS]}
+    ]),
+    new ItemCheck("Scrubs in Storms Grotto (x2)", Locations.ZORAS_RIVER, [
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, abilities: [Abilities.BLAST], items: [Items.SONG_OF_STORMS]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.CHILD, abilities: [Abilities.SINK], items: [Items.SONG_OF_STORMS]},
+      {settings: {SCRUBSANITY: "ON"}, age: Age.ADULT, items: [Items.SONG_OF_STORMS]}
     ]),
     new ItemCheck("GS Tree", Locations.ZORAS_RIVER, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, abilities: [Abilities.ATTACK]},
@@ -505,6 +536,7 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, items: [Items.HOOKSHOT, Items.FAIRY_OCARINA]},
       {age: Age.ADULT, checks: {location: Locations.WATER_TEMPLE, name: "Morpha"}},
     ]),
+    new ItemCheck("Scrubs under Grave (x3)", Locations.LAKE_HYLIA, [{settings: {SCRUBSANITY: "ON"}}]),
     new ItemCheck("Lake Lab (top)", Locations.LAKE_HYLIA, [
       {age: Age.ADULT, items: [Items.MAGIC_BEANS]},
       {age: Age.ADULT, items: [Items.HOOKSHOT, Items.FAIRY_OCARINA]},
@@ -567,6 +599,12 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {age: Age.ADULT, abilities: [Abilities.SHIELD, Abilities.BOMB], glitches: true},
       {age: Age.ADULT, items: [Items.HOVER_BOOTS, Items.MEGATON_HAMMER], glitches: true},
     ]),
+    new ItemCheck("Scrubs in Storms Grotto (x2)", Locations.GERUDO_VALLEY, [
+      {settings: {SCRUBSANITY: "ON"}, items: [Items.SONG_OF_STORMS]},
+      {age: Age.ADULT, items: [Items.LONGSHOT, Items.SONG_OF_STORMS]},
+      {age: Age.ADULT, items: [Items.EPONAS_SONG, Items.SONG_OF_STORMS]},
+      {age: Age.ADULT, items: [Items.REQUIEM_OF_SPIRIT, Items.SONG_OF_STORMS], offLogic: true}
+    ]),
     new ItemCheck("GS Bean Patch by Waterfall", Locations.GERUDO_VALLEY, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
       {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
@@ -615,11 +653,11 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Light the Torches", Locations.HAUNTED_WASTELAND, [
       {abilities: [Abilities.BURN]},
     ]),
-    new ItemCheck("GS Top Floor", Locations.HAUNTED_WASTELAND, [
-      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.LONGSHOT]},
-      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.LONGSHOT]},
-      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOVER_BOOTS, Items.HOOKSHOT]},
-      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.GERUDOS_CARD, Items.HOVER_BOOTS, Items.HOOKSHOT]}
+    new ItemCheck("GS in Building", Locations.HAUNTED_WASTELAND, [
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.LONGSHOT]},
+      {settings: {TOKENSANITY: "ALL"}, age: Age.ADULT, items: [Items.HOVER_BOOTS, Items.HOOKSHOT]},
+      {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.HOVER_BOOTS, Items.HOOKSHOT]}
     ]),
     // Desert Colossus
     new ItemCheck("Requiem of Spirit", Locations.DESERT_COLOSSUS),
@@ -633,6 +671,9 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     ], {
       visible: {peek: true, requirements: [{}]}
     }),
+    new ItemCheck("Scrubs under Silver Rock", Locations.DESERT_COLOSSUS, [
+    {settings: {SCRUBSANITY: "ON"}, age: Age.ADULT, items: [Items.SILVER_GAUNTLETS]}, 
+    ]),
     new ItemCheck("GS Bean Patch in Colossus", Locations.DESERT_COLOSSUS, [
       {settings: {TOKENSANITY: "ALL"}, age: Age.CHILD, items: [Items.BOTTLE]},
       {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.CHILD, items: [Items.BOTTLE]}
@@ -721,6 +762,18 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {abilities: [Abilities.CRUMBLE]},
       {abilities: [Abilities.STRENGTH]}
     ]),
+    new ItemCheck("Scrub in the Lobby", Locations.DODONGOS_CAVERN, [
+      {settings: {SCRUBSANITY: "ON"}, abilities: [Abilities.CRUMBLE]},
+      {settings: {SCRUBSANITY: "ON"}, abilities: [Abilities.STRENGTH]}
+    ]),
+    new ItemCheck("Scrub in Right Side Room", Locations.DODONGOS_CAVERN, [
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.ADULT], abilities: [Abilities.CRUMBLE]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.ADULT], abilities: [Abilities.STRENGTH]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD], abilities: [Abilities.CRUMBLE, Abilities.ATTACK]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD], abilities: [Abilities.STRENGTH, Abilities.ATTACK]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD], abilities: [Abilities.CRUMBLE], items: [Items.FAIRY_SLINGSHOT]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD], abilities: [Abilities.STRENGTH], items: [Items.FAIRY_SLINGSHOT]}
+    ]),
     new ItemCheck("Compass", Locations.DODONGOS_CAVERN, [
       {abilities: [Abilities.CRUMBLE]},
       {abilities: [Abilities.STRENGTH]}
@@ -732,6 +785,10 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
     new ItemCheck("Bomb Bag", Locations.DODONGOS_CAVERN, [
       {abilities: [Abilities.CRUMBLE, Abilities.IGNITE]},
       {abilities: [Abilities.STRENGTH]}
+    ]),
+    new ItemCheck("Scrubs near Bomb Bag (x2)", Locations.DODONGOS_CAVERN, [
+      {settings: {SCRUBSANITY: "ON"}, abilities: [Abilities.CRUMBLE, Abilities.IGNITE]},
+      {settings: {SCRUBSANITY: "ON"}, abilities: [Abilities.CRUMBLE, Abilities.STRENGTH]}
     ]),
     new ItemCheck("End of Bridge", Locations.DODONGOS_CAVERN, [
       {abilities: [Abilities.CRUMBLE, Abilities.IGNITE]},
@@ -772,6 +829,10 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {settings: {TOKENSANITY: "DUNGEON"}, abilities: [Abilities.CRUMBLE, Abilities.BOMB]}
     ]),
     // Jabu Jabu's Belly
+    new ItemCheck("Scrub below Elevator", Locations.JABU_JABUS_BELLY, [
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.CHILD]},
+      {settings: {SCRUBSANITY: "ON"}, age: [Age.ADULT], items: [Items.SILVER_SCALE]}
+    ]),
     new ItemCheck("Boomerang", Locations.JABU_JABUS_BELLY),
     new ItemCheck("Map", Locations.JABU_JABUS_BELLY, [{items: [Items.BOOMERANG]}]),
     new ItemCheck("Compass", Locations.JABU_JABUS_BELLY, [{items: [Items.BOOMERANG]}]),
@@ -1533,6 +1594,9 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {settings: {TOKENSANITY: "OVERWORLD"}, age: Age.ADULT, items: [Items.FAIRY_BOW]}
     ]),
     // Inside Ganon's Castle
+    new ItemCheck("Scrubs in Hidden Area (x4)", Locations.INSIDE_GANONS_CASTLE, [
+      {settings: {SCRUBSANITY: "ON"}}
+    ]),
     new ItemCheck("Forest Trial", Locations.INSIDE_GANONS_CASTLE),
     new ItemCheck("Water Trial 1", Locations.INSIDE_GANONS_CASTLE),
     new ItemCheck("Water Trial 2", Locations.INSIDE_GANONS_CASTLE),
