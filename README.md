@@ -1,6 +1,8 @@
-Tokensanity does not consider keys (haven't decyphered whether keysanity is even really implemented though).
+Added tokensanity and scrubsanity, but only for base logic. No point adding it for two retired rulesets.
 
-Scrubsanity not yet implemented.
+Added a counter for triforce hunt.
+
+Next task is figure out why Reset Tracker doesn't do it's job.
 
 <br>
 
