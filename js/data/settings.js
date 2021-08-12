@@ -34,8 +34,8 @@ define({
     "ALL": "All"
   },
   "Scrubsanity": {
-    "NONE": "None"
-    // "All"
+    "OFF": "Off",
+    "ON": "On"
   },
   "Keysanity": false,
   "Trials Off": true,
