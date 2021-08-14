@@ -62,7 +62,7 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
   Items.ADULTS_WALLET = new Item("Adult's Wallet", Age.ANY, [], {supers: [Items.GIANTS_WALLET]});
   Items.GORON_TUNIC = new Item("Goron Tunic", Age.ADULT, [], {supers: [Items.GORON_AND_ZORA_TUNICS]});
   Items.ZORA_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {supers: [Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
-  Items.KOKIRI_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {supers: [Items.ZORA_TUNIC, Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
+  Items.KOKIRI_TUNIC = new Item("Kokiri Tunic", Age.ADULT, [], {supers: [Items.ZORA_TUNIC, Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
 
   // trade items
   Items.BUNNY_HOOD = new Item("Bunny Hood", Age.CHILD, [Abilities.ZLETTER], {next: Items.MASK_OF_TRUTH});
