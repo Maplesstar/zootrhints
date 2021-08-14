@@ -77,7 +77,7 @@
           <div data-cycle="1" class="woth-dragHint" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <br>
         </div>
-        <div class="hints-barren">
+        <div class="hints-woth">
           Barren: 
           <br>
           <!-- <div class="autoComplete_wrapper">
@@ -287,8 +287,8 @@
             <td class="item" data-item="HOVER_BOOTS" data-original-item="HOVER_BOOTS">
               <img draggable="true" ondragstart="drag(event)" src="images/HOVER_BOOTS.png" />
             </td>
-            <td class="item" data-item="ZORA_TUNIC" data-original-item="ZORA_TUNIC">
-              <img draggable="true" ondragstart="drag(event)" src="images/ZORA_TUNIC.png" />
+            <td class="item" data-item="KOKIRI_TUNIC" data-original-item="KOKIRI_TUNIC">
+              <img draggable="true" ondragstart="drag(event)" src="images/KOKIRI_TUNIC.png" />
             </td>
             <td class="item" data-item="ADULTS_WALLET" data-original-item="ADULTS_WALLET">
               <img draggable="true" ondragstart="drag(event)" src="images/ADULTS_WALLET.png" />
@@ -349,6 +349,15 @@
             </td>
           </tr>
         </table>
+  <!--  This works for swapping item locations. Next step is to either make it work for a table or else rewrite it with div. 
+            <div class="item" data-item="GOLD_SKULLTULA" data-original-item="GOLD_SKULLTULA" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img id="drag1" src="images/GOLD_SKULLTULA.png" width="32" height="32" draggable="true" ondragstart="drag(event)" />
+            </div>
+            <br>
+            <div class="item" data-item="TRIFORCE_PIECE" data-original-item="TRIFORCE_PIECE" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="drag2" src="images/TRIFORCE_PIECE.png" width="32" height="32" draggable="true" ondragstart="drag(event)" />
+            </div>
+  -->
       </div>
       <form id="age-selector">
         <input id="age-child" name="age" value="CHILD" type="radio" checked="checked">

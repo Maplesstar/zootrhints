@@ -43,7 +43,7 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
     "GERUDOS_CARD": new Item("Gerudo's Card", Age.ANY),
     "GOLD_SKULLTULA": new Item("Gold Skulltula", Age.ANY, [], {count: 0, max: 100}),
     "MAGIC": new Item("Magic", Age.ANY),
-    "TRIFORCE_PIECE": new Item("TRIFORCE_PIECE", Age.ANY, [], {count: 0, max: 200}),
+    "TRIFORCE_PIECE": new Item("Triforce Piece", Age.ANY, [], {count: 0, max: 200}),
   };
 
   // items with requirements or supers
@@ -62,6 +62,7 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
   Items.ADULTS_WALLET = new Item("Adult's Wallet", Age.ANY, [], {supers: [Items.GIANTS_WALLET]});
   Items.GORON_TUNIC = new Item("Goron Tunic", Age.ADULT, [], {supers: [Items.GORON_AND_ZORA_TUNICS]});
   Items.ZORA_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {supers: [Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
+  Items.KOKIRI_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {supers: [Items.ZORA_TUNIC, Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
 
   // trade items
   Items.BUNNY_HOOD = new Item("Bunny Hood", Age.CHILD, [Abilities.ZLETTER], {next: Items.MASK_OF_TRUTH});
