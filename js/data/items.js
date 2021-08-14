@@ -22,8 +22,9 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
     "DEKU_SHIELD": new Item("Deku Shield", Age.CHILD, [Abilities.SHIELD]),
     "HYLIAN_SHIELD": new Item("Hylian Shield", Age.ADULT, [Abilities.SHIELD]), // useless for child
     "MIRROR_SHIELD": new Item("Mirror Shield", Age.ADULT, [Abilities.SHIELD]),
-    "GORON_TUNIC": new Item("Goron Tunic", Age.ADULT),
-    "ZORA_TUNIC": new Item("Zora Tunic", Age.ADULT),
+    //"GORON_TUNIC": new Item("Goron Tunic", Age.ADULT),
+    //"ZORA_TUNIC": new Item("Zora Tunic", Age.ADULT),
+    "GORON_AND_ZORA_TUNICS": new Item("Goron and Zora Tunics", Age.ADULT),
     "IRON_BOOTS": new Item("Iron Boots", Age.ADULT, [Abilities.SINK]),
     "HOVER_BOOTS": new Item("Hover Boots", Age.ADULT),
     "GOLDEN_GAUNTLETS": new Item("Golden Gauntlets", Age.ADULT, [Abilities.STRENGTH]),
@@ -59,6 +60,8 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
   Items.GORONS_BRACELET = new Item("Goron's Bracelet", Age.ANY, [Abilities.STRENGTH], {supers: [Items.SILVER_GAUNTLETS, Items.GOLDEN_GAUNTLETS]});
   Items.SILVER_SCALE = new Item("Silver Scale", Age.ANY, [Abilities.DIVE, Abilities.SINK], {supers: [Items.GOLDEN_SCALE]});
   Items.ADULTS_WALLET = new Item("Adult's Wallet", Age.ANY, [], {supers: [Items.GIANTS_WALLET]});
+  Items.GORON_TUNIC = new Item("Goron Tunic", Age.ADULT, [], {supers: [Items.GORON_AND_ZORA_TUNICS]});
+  Items.ZORA_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {supers: [Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
 
   // trade items
   Items.BUNNY_HOOD = new Item("Bunny Hood", Age.CHILD, [Abilities.ZLETTER], {next: Items.MASK_OF_TRUTH});
