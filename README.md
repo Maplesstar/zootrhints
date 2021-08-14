@@ -2,9 +2,9 @@ Added tokensanity and scrubsanity, but only for base logic. No point adding it f
 
 Added a counter for triforce hunt. (Combined tunics to fit it in the grid.)
 
-Hardest tasks are figure out why Reset Tracker doesn't do it's job and why half the javascript doesn't load in Firefox. Don't know if I'll solve either of these, lol.
+<b>To do:</b>
 
-<b>Other tasks to do:</b>
+Hardest tasks are figure out why Reset Tracker doesn't do it's job and why half the javascript doesn't load in Firefox. Don't know if I'll solve either of these, lol. (You can manually reset it by deleting rest of the url after index.html and that will take out everything.)
 
 Add newer checks that are in 6.0 but not on this tracker.
 
