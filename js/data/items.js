@@ -42,6 +42,10 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
     "GERUDOS_CARD": new Item("Gerudo's Card", Age.ANY),
     "GOLD_SKULLTULA": new Item("Gold Skulltula", Age.ANY, [], {count: 0, max: 100}),
     "MAGIC": new Item("Magic", Age.ANY),
+    "TRIFORCE_PIECE": new Item("Triforce Piece", Age.ANY, [], {count: 0, max: 200}),
+    "sold-out_32x32": new Item("sold-out_32x32", Age.ANY),
+    "Compass": new Item("Compass", Age.ANY),
+    "Dungeon Map": new Item("Dungeon Map", Age.ANY),
   };
 
   // items with requirements or supers
