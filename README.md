@@ -4,13 +4,15 @@ Added a counter for triforce hunt. (Combined tunics to fit it in the grid.)
 
 <b>To do:</b>
 
-Hardest tasks are figure out why Reset Tracker doesn't do it's job and why half the javascript doesn't load in Firefox. Don't know if I'll solve either of these, lol. (You can manually reset it by deleting rest of the url after index.html and that will take out everything.)
+Make the Reset Tracker button actually reset the tracker. Currently appears to only impact the form area with the settings, but what good does that even do? (You can manually reset it by deleting rest of the url after index.html and that will take out everything.)
 
 Add newer checks that are in 6.0 but not on this tracker.
 
 Shopsanity maybe? Unsure best method currently.
 
 Allow free organizing of items. (Seems like there was an attempt to implement this, but it was never finished.)
+
+Probably impossible: Make it cooperate in Firefox. Sometimes it works without adblock, but never works with adblock on. Inspect shows an error with the items module not loading. Error has never happened on Chrome. After some googling it seems to be a problem with Firefox that I can't work around.
 
 <br>
 
