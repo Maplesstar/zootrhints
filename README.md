@@ -2,9 +2,9 @@ Added tokensanity and scrubsanity, but only for base logic. No point adding it f
 
 Added a counter for triforce hunt. (Combined tunics to fit it in the grid.)
 
-<b>To do:</b>
+Reset Tracker button is functional now. Just make sure the Save Locations and Items is set to off in order to use it. I added that setting so that accidental refreshes won't wipe all progress.
 
-Make the Reset Tracker button actually reset the tracker. Currently appears to only impact the form area with the settings, but what good does that even do? (You can manually reset it by deleting rest of the url after index.html and that will take out everything.)
+<b>To do:</b>
 
 Add newer checks that are in 6.0 but not on this tracker.
 
