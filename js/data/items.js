@@ -44,6 +44,9 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
     "GOLD_SKULLTULA": new Item("Gold Skulltula", Age.ANY, [], {count: 0, max: 100}),
     "MAGIC": new Item("Magic", Age.ANY),
     "TRIFORCE_PIECE": new Item("Triforce Piece", Age.ANY, [], {count: 0, max: 200}),
+    "sold-out_32x32": new Item("sold-out_32x32", Age.ANY),
+    "Compass": new Item("Compass", Age.ANY),
+    "Dungeon Map": new Item("Dungeon Map", Age.ANY),
   };
 
   // items with requirements or supers
@@ -60,9 +63,11 @@ define(["classes/item", "classes/song", "data/ages", "data/abilities", "data/loc
   Items.GORONS_BRACELET = new Item("Goron's Bracelet", Age.ANY, [Abilities.STRENGTH], {supers: [Items.SILVER_GAUNTLETS, Items.GOLDEN_GAUNTLETS]});
   Items.SILVER_SCALE = new Item("Silver Scale", Age.ANY, [Abilities.DIVE, Abilities.SINK], {supers: [Items.GOLDEN_SCALE]});
   Items.ADULTS_WALLET = new Item("Adult's Wallet", Age.ANY, [], {supers: [Items.GIANTS_WALLET]});
-  Items.GORON_TUNIC = new Item("Goron Tunic", Age.ADULT, [], {supers: [Items.GORON_AND_ZORA_TUNICS]});
-  Items.ZORA_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {supers: [Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
-  Items.KOKIRI_TUNIC = new Item("Kokiri Tunic", Age.ADULT, [], {supers: [Items.ZORA_TUNIC, Items.GORON_TUNIC, Items.GORON_AND_ZORA_TUNICS]});
+
+  //Tunics
+  Items.GORON_TUNIC = new Item("Goron Tunic", Age.ADULT, [], {next: Items.GORON_AND_ZORA_TUNICS});
+  Items.ZORA_TUNIC = new Item("Zora Tunic", Age.ADULT, [], {next: Items.GORON_TUNIC});
+  Items.KOKIRI_TUNIC = new Item("Kokiri Tunic", Age.ADULT, [], {next: Items.ZORA_TUNIC});
 
   // trade items
   Items.BUNNY_HOOD = new Item("Bunny Hood", Age.CHILD, [Abilities.ZLETTER], {next: Items.MASK_OF_TRUTH});

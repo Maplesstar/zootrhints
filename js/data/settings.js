@@ -14,7 +14,7 @@ define({
     "2 MEDALLIONS": "2 Medallions",
     "4 MEDALLIONS": "4 Medallions",
     "6 MEDALLIONS": "6 Medallions",  
-    "BLITZ BRIDGE": "Blitz Bridge",    
+    "BLITZ BRIDGE": "Blitz Bridge",
     "VANILLA": "Vanilla",
     "ALL_DUNGEONS": "All Dungeons",
     "OPEN": "Open"
@@ -46,5 +46,5 @@ define({
   // "Shuffle Songs": false,
   "Shuffle Weird Egg": false,
   "Shuffle Ocarinas": false,
-  "Shuffle Gerudo's Card": false,
+  "Shuffle Gerudo's Card": false
 });
