@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>ZOOTR Tracker</title>
+  <meta charset="utf-8"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.3.2/dist/css/autoComplete.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -123,6 +124,7 @@
         </div>
       </div>
     </div>
+        
     <div style="width: 20%; float: left;">
       <div id="inventory">
         <table class="borderless">
@@ -350,7 +352,8 @@
             </td>
           </tr>
         </table>
-  <!--  This works for swapping item locations. Next step is to either make it work for a table or else rewrite it with div. 
+      </div>
+         <!--  This works for swapping item locations. Next step is to either make it work for a table or else rewrite it with div. 
             <div class="item" data-item="GOLD_SKULLTULA" data-original-item="GOLD_SKULLTULA" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
               <img id="drag1" src="images/GOLD_SKULLTULA.png" width="32" height="32" draggable="true" ondragstart="drag(event)" />
             </div>
@@ -358,8 +361,7 @@
             <div class="item" data-item="TRIFORCE_PIECE" data-original-item="TRIFORCE_PIECE" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img id="drag2" src="images/TRIFORCE_PIECE.png" width="32" height="32" draggable="true" ondragstart="drag(event)" />
             </div>
-  -->
-      </div>
+            -->
       <form id="age-selector">
         <input id="age-child" name="age" value="CHILD" type="radio" checked="checked">
         <label for="age-child">Child</label>
@@ -373,9 +375,9 @@
       <form id="settings">
         <table class="borderless"></table>
         <button id="resetTracker">Reset Tracker</button>
-      </form>
+      </form>  
     </div>
-    
+        
     <div class="clear"></div>
     <div id="footer">
       Originally by maxx#9586 aka @jaredbranum, updated by SamSch1.

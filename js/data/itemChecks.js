@@ -1637,5 +1637,11 @@ define(["data/locations", "classes/itemCheck", "data/itemsAndSongs", "data/abili
       {items: [Items.DINS_FIRE, Items.LONGSHOT, Items.MEGATON_HAMMER, Items.BOMBCHU, Items.LIGHT_ARROWS, Items.MIRROR_SHIELD, Items.GOLDEN_GAUNTLETS], abilities: [Abilities.BOTTLE]},
       {items: [Items.FIRE_ARROWS, Items.LONGSHOT, Items.MEGATON_HAMMER, Items.BOMBCHU, Items.LIGHT_ARROWS, Items.MIRROR_SHIELD, Items.GOLDEN_GAUNTLETS], abilities: [Abilities.BOTTLE]},
     ]),
+    new ItemCheck("Ganondorf", Locations.INSIDE_GANONS_CASTLE, [
+      {settings: {TRIALS_OFF: true}, items: [Items.LIGHT_ARROWS, Items.BIG_KEY_INSIDE_GANONS_CASTLE]},
+      {abilities: [Abilities.SHIELD, Abilities.BOMB], glitches: true, items: [Items.LIGHT_ARROWS, Items.BIG_KEY_INSIDE_GANONS_CASTLE]},
+      {items: [Items.DINS_FIRE, Items.LONGSHOT, Items.MEGATON_HAMMER, Items.BOMBCHU, Items.LIGHT_ARROWS, Items.MIRROR_SHIELD, Items.GOLDEN_GAUNTLETS], abilities: [Abilities.BOTTLE], items: [Items.BIG_KEY_INSIDE_GANONS_CASTLE]},
+      {items: [Items.FIRE_ARROWS, Items.LONGSHOT, Items.MEGATON_HAMMER, Items.BOMBCHU, Items.LIGHT_ARROWS, Items.MIRROR_SHIELD, Items.GOLDEN_GAUNTLETS], abilities: [Abilities.BOTTLE], items: [Items.BIG_KEY_INSIDE_GANONS_CASTLE]},
+    ]),
   ];
 });
