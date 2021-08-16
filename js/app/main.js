@@ -282,8 +282,8 @@ define(["require", "jquery", "data/ages", "data/abilities", "data/locations", "d
           
           var settingsList = sets.split(',');
   
-          if (settingsList[1] == 'RAINBOW_BRIDGE=2 MEDALLIONS' || settingsList[1] == 'RAINBOW_BRIDGE=4 MEDALLIONS') {
-            var medallionsRequiredForBridge = settingsList[1] == 'RAINBOW_BRIDGE=2 MEDALLIONS' ? 2 : 4;
+          if (settingsList[2] == 'RAINBOW_BRIDGE=2 MEDALLIONS' || settingsList[2] == 'RAINBOW_BRIDGE=4 MEDALLIONS') {
+            var medallionsRequiredForBridge = settingsList[2] == 'RAINBOW_BRIDGE=2 MEDALLIONS' ? 2 : 4;
             var medTotal = 0;
             var inventory = this.inventory;
             for(var i = 0; i < inventory.items.length; i++) {
@@ -300,7 +300,7 @@ define(["require", "jquery", "data/ages", "data/abilities", "data/locations", "d
             } else {
               $elem.addClass('inaccessible');
             }
-          } else if (settingsList[1] == 'RAINBOW_BRIDGE=BLITZ BRIDGE') {
+          } else if (settingsList[2] == 'RAINBOW_BRIDGE=BLITZ BRIDGE') {
             var totalDungeonRewards = 0;
             var inventory = this.inventory;
             for(var i = 0; i < inventory.items.length; i++) {
@@ -391,19 +391,31 @@ define(["require", "jquery", "data/ages", "data/abilities", "data/locations", "d
     }.bind(this);
 
     this.loadState = function(){
+      var key = window.location.hash || "";   
+      var saved_settings = (window.localStorage.getItem(key + "/settings") || "")
+        .split(",")
+        .filter(x => !!x);
+      this.initializeSettingsFrom(saved_settings);
+    }.bind(this);
+
+    this.loadState2 = function(){
       var key = window.location.hash || "";
+
       var saved_items = (window.localStorage.getItem(key + "/inventory") || "")
         .split(",")
         .filter(x => !!x);
       var saved_locs = (window.localStorage.getItem(key + "/locations") || "")
         .split(",")
         .filter(x => !!x);
-      var saved_settings = (window.localStorage.getItem(key + "/settings") || "")
-        .split(",")
-        .filter(x => !!x);
-      this.initializeItemIconsFrom(saved_items);
-      this.initializeLocationChecksFrom(saved_locs);
-      this.initializeSettingsFrom(saved_settings);
+
+      var sets = window.localStorage.getItem(key + "/settings") || "";
+      var settingsList = sets.split(',');
+
+      if (settingsList[0] == 'SAVE_LOCATIONS_AND_ITEMS=YES' ) {
+        this.initializeItemIconsFrom(saved_items);
+        this.initializeLocationChecksFrom(saved_locs);
+      }
+      else {}
     }.bind(this);
 
     this.initializeItemIconsFrom = function(inv){
@@ -489,6 +501,7 @@ define(["require", "jquery", "data/ages", "data/abilities", "data/locations", "d
       $('.item').contextmenu(this.uncollect);
       $('.item-check [type="checkbox"]').on('change', this.check);
       this.loadState();
+      this.loadState2();
       $('.peek-controls').click(this.peek);
       $('.peek-item').click(this.recordPeek);
       $('#age-selector input').on('change', this.refreshAccessible);
@@ -520,6 +533,26 @@ $('.resetTracker').click(function () {
   });
 
   window.location.hash = key;
+
+  this.saveReset = function(){
+    var key = window.location.hash || "";
+    window.localStorage.setItem(
+      key + "/inventory",
+      this.inventory.items.map(x => x.key + (typeof x.count === 'number' ? ('='+x.count) : '')));
+    window.localStorage.setItem(
+      key + "/locations",
+      $(".item-check.collected [type=checkbox]").toArray().map(x => x.id));
+    // A bit gross, since some settings are dropdowns and others are checkboxes
+    // and serializeArray only does the right thing on the former.
+    // Saves dropdown settings as NAME=VALUE and checkbox settings as either
+    // NAME or !NAME.
+    window.localStorage.setItem(
+      key + "/settings",
+      $("#settings select").serializeArray().map(x => x.name + "=" + x.value)
+        .concat($("#settings input[type=checkbox]").toArray().map(x => (x.checked ? "" : "!") + x.name)));
+  }.bind(this); 
+
+  this.saveReset();
 
   location.reload();
   return false;

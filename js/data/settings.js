@@ -1,4 +1,8 @@
 define({
+  "Save Locations and Items": {
+    "YES": "Yes",
+    "NO": "No"
+  },
   "Rules": {
     "LOGIC_ONLY": "Logic Only",
     "ACCESSIBLE": "Accessible - Retired Ruleset",
