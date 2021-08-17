@@ -1,12 +1,10 @@
-Added tokensanity and scrubsanity, but only for base logic. No point adding it for two retired rulesets.
+Added tokensanity, scrubsanity, Medigoron, and Carpet Salesman, but only for base logic. No point adding it for two retired rulesets.
 
 Added a counter for triforce hunt. (Combined tunics to fit it in the grid.)
 
 Reset Tracker button is functional now. Just make sure the Save Locations and Items is set to off in order to use it. I added that setting so that accidental refreshes won't wipe all progress.
 
 <b>To do:</b>
-
-Add newer checks that are in 6.0 but not on this tracker.
 
 Shopsanity maybe? Unsure best method currently.
 
