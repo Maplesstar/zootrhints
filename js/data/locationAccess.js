@@ -267,6 +267,7 @@ define(["data/locations", "data/itemsAndSongs", "data/abilities", "data/ages", "
   ];
   access[Age.ADULT][Locations.HAUNTED_WASTELAND] = [
     {locations: [Locations.GERUDO_FORTRESS], checks: [{name: "Free the Carpenters", location: Locations.GERUDO_FORTRESS}]},
+    {locations: [Locations.GERUDO_FORTRESS], items: [Items.GERUDOS_CARD]},
     {locations: [Locations.GERUDO_FORTRESS], settings: {RULES: 'NO_MAJOR_GLITCHES'}},
     {locations: [Locations.DESERT_COLOSSUS], settings: {RULES: 'NO_MAJOR_GLITCHES'}},
     {locations: [Locations.DESERT_COLOSSUS], settings: {RULES: 'ACCESSIBLE'}}
@@ -359,6 +360,7 @@ define(["data/locations", "data/itemsAndSongs", "data/abilities", "data/ages", "
   ];
   access[Age.ADULT][Locations.GERUDO_TRAINING_GROUNDS] = [
     {locations: [Locations.GERUDO_FORTRESS], items: [Items.GERUDOS_CARD], checks: [{name: "Free the Carpenters", location: Locations.GERUDO_FORTRESS}]},
+    {locations: [Locations.GERUDO_FORTRESS], items: [Items.GERUDOS_CARD]},
     {locations: [Locations.GERUDO_FORTRESS], settings: {RULES: 'NO_MAJOR_GLITCHES'}}
   ];
   access[Age.ADULT][Locations.GANONS_CASTLE] = [

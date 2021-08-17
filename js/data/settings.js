@@ -37,14 +37,12 @@ define({
     "OVERWORLD": "Overworld Only",
     "ALL": "All"
   },
-  "Scrubsanity": {
-    "OFF": "Off",
-    "ON": "On"
-  },
+  "Scrubsanity": true,
+  "Medigoron and Carpet Salesman": false,
   "Keysanity": false,
   "Trials Off": true,
   // "Shuffle Songs": false,
   "Shuffle Weird Egg": false,
   "Shuffle Ocarinas": false,
-  "Shuffle Gerudo's Card": false
+  "Shuffle Gerudo Card": false
 });
